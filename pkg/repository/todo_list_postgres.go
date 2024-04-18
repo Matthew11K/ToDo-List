@@ -5,6 +5,7 @@ import (
 	"github.com/jmoiron/sqlx"
 	"github.com/sirupsen/logrus"
 	"strings"
+	"todo"
 )
 
 type TodoListPostgres struct {
@@ -68,7 +69,7 @@ func (r *TodoListPostgres) Delete(userId, listId int) error {
 	return err
 }
 
-func (r *TodoListPostgres) Update(userId, listId int, input todo.UpdateListInput) error {
+func (r *TodoListPostgres) Update(userId, listId int, input todo.UpdateItemInput) error {
 	setValues := make([]string, 0)
 	args := make([]interface{}, 0)
 	argId := 1

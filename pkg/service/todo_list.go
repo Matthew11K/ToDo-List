@@ -1,6 +1,9 @@
 package service
 
-import "ToDoList/pkg/repository"
+import (
+	"todo"
+	"todo/pkg/repository"
+)
 
 type TodoListService struct {
 	repo repository.TodoList

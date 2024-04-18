@@ -1,9 +1,9 @@
 package handler
 
 import (
-	"net/http"
-
 	"github.com/gin-gonic/gin"
+	"net/http"
+	"todo"
 )
 
 func (h *Handler) signUp(c *gin.Context) {

@@ -1,9 +1,6 @@
 package main
 
 import (
-	"ToDoList/pkg/handler"
-	"ToDoList/pkg/repository"
-	"ToDoList/pkg/service"
 	"context"
 	"github.com/joho/godotenv"
 	_ "github.com/lib/pq"
@@ -12,6 +9,10 @@ import (
 	"os"
 	"os/signal"
 	"syscall"
+	"todo"
+	"todo/pkg/handler"
+	"todo/pkg/repository"
+	"todo/pkg/service"
 )
 
 func main() {

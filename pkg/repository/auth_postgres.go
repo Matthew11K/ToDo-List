@@ -3,6 +3,7 @@ package repository
 import (
 	"fmt"
 	"github.com/jmoiron/sqlx"
+	"todo"
 )
 
 type AuthPostgres struct {

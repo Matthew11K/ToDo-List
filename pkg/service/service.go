@@ -1,6 +1,9 @@
 package service
 
-import "ToDoList/pkg/repository"
+import (
+	"todo"
+	"todo/pkg/repository"
+)
 
 type Authorization interface {
 	CreateUser(user todo.User) (int, error)

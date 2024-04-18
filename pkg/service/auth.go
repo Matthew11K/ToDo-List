@@ -1,12 +1,13 @@
 package service
 
 import (
-	"ToDoList/pkg/repository"
 	"crypto/sha1"
 	"errors"
 	"fmt"
 	"github.com/golang-jwt/jwt"
 	"time"
+	"todo"
+	"todo/pkg/repository"
 )
 
 const (

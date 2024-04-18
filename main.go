@@ -1,15 +1,17 @@
 package main
 
 import (
+	"ToDoList/pkg/handler"
+	"ToDoList/pkg/repository"
+	"ToDoList/pkg/service"
 	"context"
-	"os"
-	"os/signal"
-	"syscall"
-
 	"github.com/joho/godotenv"
 	_ "github.com/lib/pq"
 	"github.com/sirupsen/logrus"
 	"github.com/spf13/viper"
+	"os"
+	"os/signal"
+	"syscall"
 )
 
 func main() {

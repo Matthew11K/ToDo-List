@@ -2,10 +2,11 @@ package repository
 
 import (
 	"fmt"
-	"github.com/jmoiron/sqlx"
-	"github.com/sirupsen/logrus"
 	"strings"
 	"todo"
+
+	"github.com/jmoiron/sqlx"
+	"github.com/sirupsen/logrus"
 )
 
 type TodoListPostgres struct {
@@ -69,7 +70,7 @@ func (r *TodoListPostgres) Delete(userId, listId int) error {
 	return err
 }
 
-func (r *TodoListPostgres) Update(userId, listId int, input todo.UpdateItemInput) error {
+func (r *TodoListPostgres) Update(userId, listId int, input todo.UpdateListInput) error {
 	setValues := make([]string, 0)
 	args := make([]interface{}, 0)
 	argId := 1
@@ -86,9 +87,6 @@ func (r *TodoListPostgres) Update(userId, listId int, input todo.UpdateItemInput
 		argId++
 	}
 
-	// title=$1
-	// description=$1
-	// title=$1, description=$2
 	setQuery := strings.Join(setValues, ", ")
 
 	query := fmt.Sprintf("UPDATE %s tl SET %s FROM %s ul WHERE tl.id = ul.list_id AND ul.list_id=$%d AND ul.user_id=$%d",
